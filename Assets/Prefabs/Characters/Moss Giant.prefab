@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4681023620858286}
   - component: {fileID: 212721197996427452}
+  - component: {fileID: 95863779797376536}
   m_Layer: 0
   m_Name: MossGiant_Sprite
   m_TagString: Untagged
@@ -35,6 +36,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4918595672131292}
+  - component: {fileID: 114563067058191070}
   m_Layer: 0
   m_Name: Moss Giant
   m_TagString: Untagged
@@ -62,13 +64,47 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1507973634648906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.369999, y: 0.09399998, z: 0}
+  m_LocalPosition: {x: 7.2, y: 0.09399998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4681023620858286}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95863779797376536
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019895824195342}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f2bbc69c20d36df41a7f1aee0fbfb4b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114563067058191070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1507973634648906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c028e2f7aed4104bb8778a9158588d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  speed: 1
+  loot: 0
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
 --- !u!212 &212721197996427452
 SpriteRenderer:
   m_ObjectHideFlags: 1
