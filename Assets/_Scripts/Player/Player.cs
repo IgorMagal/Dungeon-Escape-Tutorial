@@ -13,7 +13,8 @@ public class Player : MonoBehaviour, IDamageable
 	private SpriteRenderer playerSprite;
 	private SpriteRenderer swordArc;
 	private bool grounded = false;
-
+	
+	public int loot;
 	int IDamageable.Health {get;set;}
 	
 	
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour, IDamageable
 	{		
 		Movement();	
 		Attack();
+		Debug.Log("Gems: " + loot);
 		
 	}
     private void Movement()

@@ -129,9 +129,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   speed: 1
-  loot: 0
+  loot: 2
   pointA: {fileID: 0}
   pointB: {fileID: 0}
+  diamondPrefab: {fileID: 1157383204676226, guid: 0d6bd0b3ef5ea384c80bde17d72ee131,
+    type: 2}
   acidPrefab: {fileID: 1707361041815096, guid: 46db86a2d53a14947a80273c8ebaaa1b, type: 2}
 --- !u!114 &114605382519851246
 MonoBehaviour:

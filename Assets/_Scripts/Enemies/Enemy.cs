@@ -128,12 +128,12 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
 	private void Die()
 	{		
-		Destroy(this.gameObject);
-				
+		Destroy(this.gameObject);				
 	}
 
 	private void DropDiamond()
 	{
-		Instantiate(diamondPrefab,this.transform.position,Quaternion.identity);
+		GameObject diamond = Instantiate(diamondPrefab,transform.position,Quaternion.identity) as GameObject;
+		diamond.GetComponent<Diamond>().value = loot;
 	}	
 }

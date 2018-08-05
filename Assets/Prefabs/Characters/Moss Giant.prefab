@@ -232,9 +232,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   speed: 1
-  loot: 0
+  loot: 5
   pointA: {fileID: 0}
   pointB: {fileID: 0}
+  diamondPrefab: {fileID: 1157383204676226, guid: 0d6bd0b3ef5ea384c80bde17d72ee131,
+    type: 2}
 --- !u!114 &114682802239339354
 MonoBehaviour:
   m_ObjectHideFlags: 1
