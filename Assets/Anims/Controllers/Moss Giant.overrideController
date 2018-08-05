@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Moss Giant
+  m_Controller: {fileID: 9100000, guid: 474c619058a627c42b86af6be1f71876, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3b0af8e59bb67174e8191e71fe365eea, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6d8567889c1c2af44a81d1416b68754a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 21ee0bbd66972114cbc0700d9fb19e97, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fdcd87bd96da5784fabad701266b5935, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 992371a613964d740a3cc01da6796976, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c525bd61bdff0fa4da519489510f20ee, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4c05e0f69fe2522469d1566f8edffd21, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 38249c4bda5344c49bc465efb867da51, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: de7d831c4f64bb341801a64bfd0e4fb4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 88a28381d575f5445a328c1cb229eb69, type: 2}

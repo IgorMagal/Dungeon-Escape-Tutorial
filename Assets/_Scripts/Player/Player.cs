@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour 
+public class Player : MonoBehaviour, IDamageable 
 {
 	private Rigidbody2D rb2d;
 	[SerializeField] private float moveSpeed = 3f;
@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 	private SpriteRenderer swordArc;
 	private bool grounded = false;
 
+	int IDamageable.Health {get;set;}
 	
 	
 	void Start ()
@@ -78,20 +79,25 @@ public class Player : MonoBehaviour
 			swordArc.flipX = false;
 			swordArc.flipY = false;
 			Vector3 newPos = swordArc.transform.localPosition;
-			newPos.x = 1.01f;
+			newPos.x = 0.3f;
 			swordArc.transform.localPosition = newPos;
 			;	
 		}				
 		else if (move < 0)
 		{
 			playerSprite.flipX = true;
-			swordArc.flipX = true;
+			swordArc.flipX = false;
 			swordArc.flipY= true;			
 			Vector3 newPos = swordArc.transform.localPosition;
-			newPos.x = -1.01f;
+			newPos.x = -0.3f;
 			swordArc.transform.localPosition = newPos;
 			
 		}
 			
+	}
+
+	void IDamageable.Damage(int damage)
+	{
+		Debug.Log(this.gameObject.name + " has been hit!");
 	}
 }

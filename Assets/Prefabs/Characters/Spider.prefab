@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4702737469004012}
   - component: {fileID: 212288253356098862}
-  - component: {fileID: 95130954380807882}
+  - component: {fileID: 95177524131263082}
+  - component: {fileID: 114605382519851246}
   m_Layer: 0
   m_Name: Spider_Sprite
   m_TagString: Untagged
@@ -37,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4747503738315144}
   - component: {fileID: 114097115068549736}
+  - component: {fileID: 61574171398025380}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -71,7 +73,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95130954380807882
+--- !u!61 &61574171398025380
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1032734532101614}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.43434334, y: -0.40240562}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3321419, y: 0.78282857}
+  m_EdgeRadius: 0
+--- !u!95 &95177524131263082
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -80,7 +107,7 @@ Animator:
   m_GameObject: {fileID: 1016527467098210}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 089fb743b864a4045bc708f275efc191, type: 2}
+  m_Controller: {fileID: 22100000, guid: de48fd609563c6949b0121d0c9cd3ce9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -100,11 +127,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205bfd764f9d62d44b52e39213942f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 2
   speed: 1
   loot: 0
   pointA: {fileID: 0}
   pointB: {fileID: 0}
+  acidPrefab: {fileID: 1707361041815096, guid: 46db86a2d53a14947a80273c8ebaaa1b, type: 2}
+--- !u!114 &114605382519851246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016527467098210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2518f8188f132614798b0729bc621a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212288253356098862
 SpriteRenderer:
   m_ObjectHideFlags: 1
