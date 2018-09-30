@@ -12,7 +12,9 @@ public class Player : MonoBehaviour, IDamageable
 	private PlayerAnimation playerAnim;
 	private SpriteRenderer playerSprite;
 	private SpriteRenderer swordArc;
+	private GameObject shopKeeper;
 	private bool grounded = false;
+	public bool shopping;
 	
 	public int loot;
 	int IDamageable.Health {get;set;}
@@ -20,7 +22,9 @@ public class Player : MonoBehaviour, IDamageable
 	
 	void Start ()
     {
-        InitialiseComponents();		
+        InitialiseComponents();
+		shopping = false;
+
     }
 
     private void InitialiseComponents()
@@ -28,14 +32,14 @@ public class Player : MonoBehaviour, IDamageable
         rb2d = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<PlayerAnimation>();
         playerSprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
-		swordArc = transform.GetChild(1).GetComponent<SpriteRenderer>();
+		swordArc = transform.GetChild(1).GetComponent<SpriteRenderer>();		
     }
 
     private void FixedUpdate() 
 	{		
 		Movement();	
 		Attack();
-		Debug.Log("Gems: " + loot);
+//		Debug.Log("Gems: " + loot);
 		
 	}
     private void Movement()
@@ -56,9 +60,9 @@ public class Player : MonoBehaviour, IDamageable
 
 
 	private void Attack()
-	{
-		if (Input.GetKeyDown(KeyCode.Mouse0) && IsGrounded())	// Regular Attack.			
-			playerAnim.Attack();					
+	{				
+		if (Input.GetKeyDown(KeyCode.Mouse0) && IsGrounded() && shopping == false)	// Regular Attack.			
+		playerAnim.Attack();							
 	}
    
     private bool IsGrounded()

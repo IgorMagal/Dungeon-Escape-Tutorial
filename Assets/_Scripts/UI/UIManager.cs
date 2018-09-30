@@ -3,16 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class UIManager : MonoBehaviour 
 {
-	public Text gemCountText;
-
-	public void OpenShop(int gemCount)
-	{
-		gemCountText.Text = (int)gemCount.ToString();
-	}
-
-	
+	#region SingletonCode	
 	//Sigleton Code
 	private static UIManager _instance;
 	public static UIManager Instance
@@ -30,8 +24,20 @@ public class UIManager : MonoBehaviour
 	{
 		_instance = this;
 	}
-
+	#endregion 
 	
+	public Text gemCountText;
+	public Image selectionImg;
+	
+	public void OpenShop(int gemCount)
+	{
+		gemCountText.text = gemCount.ToString() + "G";
+	}
+	
+	public void UpdateSelectionPos(int yPos)
+	{
+		selectionImg.rectTransform.anchoredPosition = new Vector2(selectionImg.rectTransform.anchoredPosition.x,yPos);		
+	}
 
 
 }

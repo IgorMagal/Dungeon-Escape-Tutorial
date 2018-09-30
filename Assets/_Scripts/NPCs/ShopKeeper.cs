@@ -11,29 +11,33 @@ public class ShopKeeper : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D other) 
 	{
 		// Detect when the player is near
-		if (other.tag == "Player")		{
-			//Debug.Log("Player detected by ShopKeeper");
+		if (other.tag == "Player")		
+		{					
 			Player player = other.GetComponent<Player>();
 			if (player != null)
 			{
-				UIManager.Instance = OpenShop(player.loot); 
+				UIManager.Instance.OpenShop(player.loot);
+				player.shopping = true;				
 			}
-
 			shopMenu.gameObject.SetActive(true);			
-		}
-		//Activate Shop
+		}		
 	}
 
 	private void OnTriggerExit2D(Collider2D other) 
 	{
 		if (other.tag == "Player")
 		{
-			//Debug.Log("Player detected by ShopKeeper");			
+			Player player = other.GetComponent<Player>();										
 			shopMenu.gameObject.SetActive(false);
-		}
+			player.shopping = false;
+		}	
+	}
 
-		// Detect when the player leaves
-		// Disable Shop		
+	public void SelectItem(int itemNumber)
+	{
+		Debug.Log("You've selected " + itemNumber);
+		
+	
 	}
 	
 }
