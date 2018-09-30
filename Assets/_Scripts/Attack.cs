@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour 
 {
-	private bool damaged = false;
+   	private bool damaged = false;
 	[SerializeField] private int weaponDamage = 1;
-
+ 
 	private void OnTriggerEnter2D(Collider2D other) 
 	{
 		Debug.Log("You hit " + other.gameObject.name);
@@ -18,7 +18,7 @@ public class Attack : MonoBehaviour
 			StartCoroutine("damageCooldown");
 		}							
 	}
-
+	
 	IEnumerator damageCooldown()
 	{			
 		yield return new WaitForSeconds(1f);
